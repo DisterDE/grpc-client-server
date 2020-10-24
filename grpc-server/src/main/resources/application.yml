@@ -1,0 +1,6 @@
+server:
+  port: 8787
+
+grpc:
+  port: 6060
+  enableReflection: true

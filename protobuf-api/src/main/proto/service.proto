@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ru.kachalov.grpc.proto;
+
+option java_multiple_files = true;
+option java_package = "ru.kachalov.grpc.proto";
+
+import "request.proto";
+import "response.proto";
+
+service HelloService {
+  rpc ProcessMessage(HelloRequest) returns (HelloResponse);
+}
