@@ -8,9 +8,9 @@ plugins {
 version = "1.0"
 
 dependencies {
-    compileOnly("com.google.protobuf:protobuf-java:3.13.0")
-    compileOnly("io.grpc:grpc-stub:1.33.0")
-    compileOnly("io.grpc:grpc-protobuf:1.33.0")
+    implementation("com.google.protobuf:protobuf-java:3.13.0")
+    implementation("io.grpc:grpc-stub:1.33.0")
+    implementation("io.grpc:grpc-protobuf:1.33.0")
 }
 
 idea {

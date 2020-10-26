@@ -9,7 +9,7 @@ version = "1.0-SNAPSHOT"
 dependencies {
     implementation(project(":protobuf-api"))
 
-    compileOnly("com.google.protobuf:protobuf-java:3.13.0")
+    implementation("com.google.protobuf:protobuf-java:3.13.0")
 
     implementation("org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE") {
         exclude("org.springframework.boot:spring-boot-starter-json")
