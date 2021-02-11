@@ -2,13 +2,13 @@ package ru.kachalov.grpc.server
 
 import org.springframework.boot.Banner
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.builder.SpringApplicationBuilder
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
 class Server
 
-fun main(args: Array<String>) {
-    SpringApplicationBuilder(Server::class.java)
-        .bannerMode(Banner.Mode.OFF)
-        .run(*args)
+fun main() {
+    runApplication<Server>() {
+        setBannerMode(Banner.Mode.OFF)
+    }
 }

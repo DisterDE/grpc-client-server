@@ -3,7 +3,7 @@ package ru.kachalov.grpc.client
 import org.springframework.boot.Banner
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.builder.SpringApplicationBuilder
+import org.springframework.boot.runApplication
 import ru.kachalov.grpc.client.components.GrpcClient
 
 @SpringBootApplication
@@ -14,8 +14,8 @@ class Client(private val grpcClient: GrpcClient) : CommandLineRunner {
     }
 }
 
-fun main(args: Array<String>) {
-    SpringApplicationBuilder(Client::class.java)
-        .bannerMode(Banner.Mode.OFF)
-        .run(*args)
+fun main() {
+    runApplication<Client>() {
+        setBannerMode(Banner.Mode.OFF)
+    }
 }
